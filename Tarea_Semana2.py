@@ -1,6 +1,6 @@
 class Personaje:
 
-    # Inicializamos un nuevo personaje con sus atributos básicos
+    # Creamos un nuevo personaje con sus atributos básicos
     def __init__(self, nombre, fuerza, inteligencia, defensa, vida):
         self.nombre = nombre  # Nombre del personaje
         self.fuerza = fuerza  # Atributo de fuerza del personaje
@@ -9,7 +9,7 @@ class Personaje:
         self.vida = vida  # Puntos de vida del personaje
         self.nivel = 1  # Nivel inicial del personaje
 
-    # Método para mostrar los atributos del personaje
+    # Procedimiento para mostrar los atributos del personaje
     def atributos(self):
         print(f"{self.nombre} (Nivel {self.nivel}):")  # Indica el nombre y nivel del personaje
         print(f"· Fuerza: {self.fuerza}")  # Indica la fuerza del personaje
@@ -17,23 +17,23 @@ class Personaje:
         print(f"· Defensa: {self.defensa}")  # Indica la defensa del personaje
         print(f"· Vida: {self.vida}")  # Indica la vida del personaje
 
-    # Método para subir de nivel y mejorar los atributos del personaje
+    # Procedimiento para subir de nivel y mejorar los atributos del personaje
     def subir_nivel(self, fuerza, inteligencia, defensa):
         self.fuerza += fuerza  # Aumenta la fuerza del personaje
         self.inteligencia += inteligencia  # Aumenta la inteligencia del personaje
         self.defensa += defensa  # Aumenta la defensa del personaje
         self.nivel += 1  # Aumenta el nivel del personaje
 
-    # Método para verificar si el personaje está vivo
+    # Procedimiento para verificar si el personaje está vivo
     def esta_vivo(self):
         return self.vida > 0  # Devuelve True si la vida es mayor que 0
 
-    # Método para marcar al personaje como muerto
+    # Procedimiento para marcar al personaje como muerto
     def morir(self):
         self.vida = 0  # Establece la vida a 0
         print(f"{self.nombre} ha muerto")  # Imprime que el personaje ha muerto
 
-    # Método para recibir daño y reducir la vida del personaje
+    # Procedimiento para recibir daño y reducir la vida del personaje
     def recibir_daño(self, daño):
         daño_real = max(daño - self.defensa, 0)  # Calcula el daño real restando la defensa
         self.vida -= daño_real  # Reduce la vida por el daño recibido
@@ -41,12 +41,12 @@ class Personaje:
         if not self.esta_vivo():  # Si la vida es 0 o menos, el personaje muere
             self.morir()
 
-    # Método para atacar a otro personaje
+    # Procedimiento para atacar a otro personaje
     def atacar(self, enemigo):
         daño = self.calcular_daño()  # Calcula el daño a infligir
         enemigo.recibir_daño(daño)  # El enemigo recibe el daño
 
-    # Método para calcular el daño básico del personaje (puede ser sobrescrito en subclases)
+    # Procedimiento para calcular el daño básico del personaje (puede ser sobrescrito en subclases)
     def calcular_daño(self):
         return self.fuerza  # Devuelve la fuerza como el daño básico
 
@@ -58,16 +58,16 @@ class Guerrero(Personaje):
         super().__init__(nombre, fuerza, inteligencia, defensa, vida)  # Llama al constructor de la clase base
         self.espada = espada  # Daño adicional del arma espada
 
-    # Método para cambiar el arma del guerrero
+    # Procedimiento para cambiar el arma del guerrero
     def cambiar_arma(self, daño_espada):
         self.espada = daño_espada  # Actualiza el daño de la espada
 
-    # Sobrescribe el método 'atributos' para incluir la espada
+    # Reemplazar el método 'atributos' para incluir la espada
     def atributos(self):
         super().atributos()  # Llama al método 'atributos' de la clase base
         print(f"· Espada: {self.espada}")  # Indica el daño de la espada
 
-    # Sobrescribe el método 'calcular_daño' para incluir el daño de la espada
+    # Reemplazar el método 'calcular_daño' para incluir el daño de la espada
     def calcular_daño(self):
         return self.fuerza + self.espada  # Regresa la fuerza más el daño de la espada
 
@@ -79,16 +79,16 @@ class Mago(Personaje):
         super().__init__(nombre, fuerza, inteligencia, defensa, vida)  # Llama al constructor de la clase base
         self.libro = libro  # Poder adicional del libro de hechizos
 
-    # Método para cambiar el libro del mago
+    # Procedimiento para cambiar el libro del mago
     def cambiar_libro(self, poder_libro):
-        self.libro = poder_libro  # Actualiza el poder del libro
+        self.libro = poder_libro  # Renueva el poder del libro
 
-    # Sobrescribe el método 'atributos' para incluir el libro
+    # Reemplazar el método 'atributos' para incluir el libro
     def atributos(self):
         super().atributos()  # Llama al método 'atributos' de la clase base
         print(f"· Libro: {self.libro}")  # Muestra el poder del libro
 
-    # Sobrescribe el método 'calcular_daño' para incluir el poder del libro
+    # Reemplazar el método 'calcular_daño' para incluir el poder del libro
     def calcular_daño(self):
         return self.inteligencia + self.libro  # Devuelve la inteligencia más el poder del libro
 
@@ -106,20 +106,20 @@ def combate(jugador_1, jugador_2):
             jugador_2.atacar(jugador_1)  # El jugador 2 ataca al jugador 1
             jugador_2.atributos()  # Indica los atributos del jugador 2
         turno += 1  # Aumenta el contador de turnos
-    if jugador_1.esta_vivo():  # Si el jugador 1 sigue vivo después del combate, gana
+    if jugador_1.esta_vivo():  # Si el jugador 1 sigue vivo después del combate gana
         print(f"\nHa obtenido la victoria {jugador_1.nombre}")
-    elif jugador_2.esta_vivo():  # Si el jugador 2 sigue vivo después del combate, gana
+    elif jugador_2.esta_vivo():  # Si el jugador 2 sigue vivo después del combate gana
         print(f"\nHa obtenido la victoria {jugador_2.nombre}")
-    else:  # Si ambos personajes mueren, es un empate
+    else:  # Si ambos mueren marca un empate
         print("\nEmpate")
 
-# Ejemplo de uso: creación de un guerrero y un mago
+# Modo de uso: creación de un guerrero y un mago
 personaje_1 = Guerrero("Cristina", 25, 23, 4, 100, 5)  # Crea un guerrero llamado Guts
 personaje_2 = Mago("Valentina", 10, 12, 4, 100, 8)  # Crea un mago llamado Vanessa
 
-# Muestra los atributos iniciales de los personajes
+# Indica los atributos iniciales de los personajes
 personaje_1.atributos()
 personaje_2.atributos()
 
-# Inicia el combate entre los dos personajes
+# Empieza el combate entre los dos personajes
 combate(personaje_1, personaje_2)
