@@ -1,2 +1,2 @@
 # PROGRAMACION-ORIENTADA-A-OBJETOS
-En este repositorio aplicaremos abstracción, encapsulación, herencia y polimorfismo.
+En este repositorio aplicaremos técnicas de Programación Orientada a Objetos (POO)
