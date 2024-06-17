@@ -2,12 +2,12 @@ class Personaje:
 
     # Creamos un nuevo personaje con sus atributos básicos
     def __init__(self, nombre, fuerza, inteligencia, defensa, vida):
-        self.nombre = nombre  # Nombre del personaje
-        self.fuerza = fuerza  # Atributo de fuerza del personaje
-        self.inteligencia = inteligencia  # Atributo de inteligencia del personaje
-        self.defensa = defensa  # Atributo de defensa del personaje
-        self.vida = vida  # Puntos de vida del personaje
-        self.nivel = 1  # Nivel inicial del personaje
+        self.nombre = nombre  
+        self.fuerza = fuerza  
+        self.inteligencia = inteligencia  
+        self.defensa = defensa  
+        self.vida = vida  
+        self.nivel = 1  
 
     # Procedimiento para mostrar los atributos del personaje
     def atributos(self):
@@ -110,12 +110,12 @@ def combate(jugador_1, jugador_2):
         print(f"\nHa obtenido la victoria {jugador_1.nombre}")
     elif jugador_2.esta_vivo():  # Si el jugador 2 sigue vivo después del combate gana
         print(f"\nHa obtenido la victoria {jugador_2.nombre}")
-    else:  # Si ambos mueren marca un empate
+    else:  # Si los dos mueren marca un empate
         print("\nEmpate")
 
 # Modo de uso: creación de un guerrero y un mago
-personaje_1 = Guerrero("Cristina", 25, 23, 4, 100, 5)  # Crea un guerrero llamado Guts
-personaje_2 = Mago("Valentina", 10, 12, 4, 100, 8)  # Crea un mago llamado Vanessa
+personaje_1 = Guerrero("Cristina", 25, 23, 4, 100, 5)  
+personaje_2 = Mago("Valentina", 10, 12, 4, 100, 8)  
 
 # Indica los atributos iniciales de los personajes
 personaje_1.atributos()
