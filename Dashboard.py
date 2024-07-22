@@ -28,18 +28,15 @@ def mostrar_menu():
 
     # Define un diccionario con las opciones del menú
     opciones = {
-        '1': 'Tarea_Semana2.py',
-        '2': 'Tarea_Semana3_Programación_Orientada_a_Objetos.py',
-        '3': 'Tarea_Semana3_Programación_Tradicional.py',
-        '4': 'Tarea_Semana4_Ejemplo2_Mundo_Real_POO.py',
-        '5': 'Tarea_Semana4_Ejemplos_Mundo_Real_POO.py',
-        '6': 'Tarea_Semana5_Tipos_de_datos_Identificadores.py',
-        '7': 'Tarea_Semana6_Clases_objetos_herencia_encapsulamiento_y_polimorfismo.py',
-        '8': 'Tarea_Semana7_Constructores_y_Destructores',
+        '1': 'Semana 2/Tarea_Semana2.py',
+        '2': 'Semana 3/Tarea_Semana3_Programación_Tradicional.py',
+        '3': 'Semana 4/Tarea_Semana4_Ejemplo2_Mundo_Real_POO.py',
+        '4': 'Semana 4/Tarea_Semana4_Ejemplos_MundoReal_POO.py',
+        '5': 'Semana 5/Tarea_Semana5_Tipos_de_datos_Identificadores.py',
+        '6': 'Semana 6/Tarea_Semana6_Clases_objetos_herencia_encapsulamiento_y_polimorfismo.py',
+        '7': 'Semana 7/Tarea_Semana7_Constructores_y_Destructores.py',
         # Agrega aquí el resto de las rutas de los scripts
     }
-
-    # Inicia un bucle infinito para mostrar el menú
     while True:
         # Imprime el título del menú
         print("\nMenu Principal - Dashboard")
