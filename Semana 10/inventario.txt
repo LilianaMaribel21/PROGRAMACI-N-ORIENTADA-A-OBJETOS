@@ -1,0 +1,4 @@
+000012, Computadora Portatil,20,530.0
+000056, CPU Gamer Core i7,12,900.0
+000078, Teclado Gamer,14,45.0
+000034,Disco Solido Externo 1TB ,32,170.0
