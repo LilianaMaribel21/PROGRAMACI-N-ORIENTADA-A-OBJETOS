@@ -1,0 +1,20 @@
+{
+    "0012": {
+        "id_producto": "0012",
+        "nombre": "Computadora portatil Lenovo ",
+        "cantidad": 30,
+        "precio": 530.0
+    },
+    "0046": {
+        "id_producto": "0046",
+        "nombre": "Procesador gamer Core i7",
+        "cantidad": 25,
+        "precio": 700.0
+    },
+    "0078": {
+        "id_producto": "0078",
+        "nombre": "Disco Solido Externo 1TB ",
+        "cantidad": 22,
+        "precio": 180.0
+    }
+}
