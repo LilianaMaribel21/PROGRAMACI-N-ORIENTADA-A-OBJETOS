@@ -1,0 +1,6 @@
+{"libros": {"20000": {"titulo": "Elevation", "autor": "Stephen King", "categoria": "Novela", "isbn": "20000"},
+            "30001": {"titulo": "La sangre manda", "autor": "Stephen Kingn", "categoria": "Novela", "isbn": "30001"},
+            "40002": {"titulo": "Despues", "autor": "Stephen King", "categoria": "Novela", "isbn": "40002"},
+            "50003": {"titulo": "Ceunto de hadas", "autor": "Stephen King", "categoria": "Novela", "isbn": "50003"},
+            "60004": {"titulo": "La cúpula", "autor": "Stephen King", "categoria": "Novela", "isbn": "60004"}},
+            "usuarios": ["000123"], "prestamos": {"000123": []}}
