@@ -11,7 +11,7 @@ class TaskManagerApp:
 
         # Campo de entrada para añadir nuevas tareas
         self.task_entry = tk.Entry(root, width=45)  # Establecer el ancho del campo de entrada
-        self.task_entry.pack(pady=10)  # Añadir margen vertical entre el campo de entrada y otros elementos
+        self.task_entry.pack(pady=20)  # Añadir margen vertical entre el campo de entrada y otros elementos
 
         # Botón para añadir una nueva tarea
         self.add_task_button = tk.Button(root, text="Nueva Tarea", command=self.add_task)
